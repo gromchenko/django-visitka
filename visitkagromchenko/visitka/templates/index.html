@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block title %}
+Главная страница
+{% endblock %}
+{% block content %}
+ {% load static %}
+<h1>Николай Громченко – услуги юриста в Туле</h1>
+<p><img src="{% static 'images/main.png' %}" width="100%"></p>
+{% for t in main %}
+{{t.txt|safe}}
+{% endfor %}
+
+{% endblock %}
